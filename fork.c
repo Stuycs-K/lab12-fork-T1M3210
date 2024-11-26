@@ -7,8 +7,8 @@
 #include <string.h>
 
 int randomint() {
-	int id = getpid();
-	return id % 5 + 1;
+	srand(time(NULL) + getpid());
+	return rand() % 5 + 1;
 }
 
 int main() {
